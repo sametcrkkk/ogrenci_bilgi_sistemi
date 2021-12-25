@@ -2,13 +2,14 @@ package com.bilgeadam.ogrencibilgisistemi.dao;
 
 import com.bilgeadam.ogrencibilgisistemi.dto.Ogrenci;
 import com.bilgeadam.ogrencibilgisistemi.vt.VTBaglanti;
+import org.jetbrains.annotations.NotNull;
 
 import java.sql.*;
 
 
 public class OgrenciDAO {
 
-    public static boolean ekle(Ogrenci ogr) throws SQLException, ClassNotFoundException {
+    public static boolean ekle(@NotNull Ogrenci ogr) throws SQLException, ClassNotFoundException {
 
         Connection conn = VTBaglanti.baglantiGetir();
 
